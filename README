@@ -1,1 +1,11 @@
 Check status of my pizza orders :)
+
+Usage: run tracker
+
+Available commands:
+  help    Displays help for a command
+  list    Lists commands
+  notify  Get notification for order on status change.
+  show    Show all orders.
+
+Don't forget to add your phone number and store id to the tracker script

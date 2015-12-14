@@ -1,0 +1,18 @@
+#! /usr/bin/env php
+
+<?php
+
+use Symfony\Component\Console\Application;
+
+require 'vendor/autoload.php';
+
+
+$app = new Application('Dominos Tracker', '1.0');
+$storeid = ''; //CHANGE THIS
+$phone = ''; //CHANGE THIS
+
+$orderAdapter = new App\OrderAdapter($storeid, $phone);
+
+$app->add(new App\NotifyCommand($orderAdapter));
+$app->add(new App\ShowCommand($orderAdapter));
+$app->run();
